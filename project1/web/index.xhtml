@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+
+    <h:head>
+        <title>Muslim.in | Login</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"></link>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&#38;display=swap');
+
+            body{
+                overflow: hidden;
+                background: #EBF4F7;
+            }
+            .title{
+                color: #F3ECD3;
+                background-color: #474F85;
+                padding: 20px;
+                letter-spacing: 2px;
+                margin: 0;
+                font-family: 'Poppins', sans-serif;
+                font-weight: bold;
+            }
+            form {
+                margin-top: -37%;
+                float: right;
+                width: 41.4%;
+            }
+            input[type=text], input[type=password]{
+                border: 0;
+                border-radius: 20px;
+                margin: 4px 0;
+                padding: 8px 10px;
+                outline: none;
+            }
+            input[type=submit]{
+                padding: 6px 20px;
+                margin-top: 20%;
+                margin-bottom: 3%;
+                border: 0;
+                border-radius: 5px;
+                background-color: white;
+                color: #474F85;
+                outline: none;
+            }
+            .gambar{
+                /*position: relative;*/ 
+                font-family: 'Poppins', sans-serif;
+                /*margin-top: -1px;*/ 
+                border: 0;
+                border-radius: 0 20px 20px 0;
+                background-color: #3A416D;
+                width: 750px;
+            }
+            form p {
+                color: darkslategray;
+            }
+            img{
+                position: relative;
+                margin-left: -50px;
+                width: 800px;
+                height: 545px;
+                opacity: 0.5;
+                border: 0;
+                border-radius: 0 20px 20px 0;
+                box-shadow: 15px 0px 16px -12px rgba(0,0,0,0.75);
+
+            }
+            a {
+                color: darkmagenta;
+            }
+            input[type=submit]:hover{
+                background-color: #474F85;
+                color: #EBF4F7;
+                box-shadow: 4px 4px 16px -10px rgba(0,0,0,0.75);
+            }
+            .gambar h3{
+                
+                letter-spacing: 2px;
+                position: absolute;
+                top: 300px;
+                left: 300px;
+                z-index: 1;
+            }
+            .gambar p{
+                position: absolute;
+                top: 335px;
+                left: 270px;
+                z-index: 1;
+                color: #F3ECD3;
+                font-size: 1.1rem;
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <h3 class="title" align="center">Muslim.in</h3>
+        <div class="gambar">
+            <h3 style="color: #F3ECD3; font-size: 2rem">Local's</h3>
+            <p>Best Muslim Apparel</p>
+            <img src="https://images.pexels.com/photos/4199043/pexels-photo-4199043.jpeg" alt="stylish muslim"></img>
+        </div>
+        <h:form style="text-align: center;">
+            <p style="font-size: 1.3em; margin-bottom: 50px">Log in to Muslim.in</p>
+            <h:inputText a:placeholder="Email" value="#{user.email}"/><br/>
+            <h:inputSecret a:placeholder="Password" value="#{user.password}"/><br/>
+            <h:commandButton value="Login" action="#{user.login_user()}"/>
+            <hr style="margin-top: 40px; width: 60%"/>
+            <p style="margin-top: 40px">Haven't signed up yet? come <a href="./register.xhtml">Register</a></p>
+        </h:form>
+    </h:body>
+</html>
+

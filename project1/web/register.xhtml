@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Muslim.in | Sign up</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"></link>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&#38;display=swap');
+
+            body {
+                overflow: hidden;
+                background-color: #EBF4F7;
+            }
+
+            .title {
+                color: #F3ECD3;
+                background-color: #474F85;
+                padding: 20px;
+                letter-spacing: 2px;
+                margin: 0;
+                font-family: 'Poppins', sans-serif;
+                font-weight: bold;
+            }
+
+            .col-lg-6 {
+                float: right;
+                width: 47%;
+                margin-top: -61%;
+                top: 0;
+                display: inline-block;
+            }
+
+            img {
+                opacity: 0.7;
+                width: 680px;
+                box-shadow: 20px -1px 17px -15px rgba(0, 0, 0, 0.75);
+                border: 0;
+                border-radius: 0 20px 20px 0;
+            }
+
+            input[type=text] {
+                border: 0;
+                border-radius: 20px;
+                padding: 8px 10px;
+                outline: none;
+                margin: 7px 5.2px;
+            }
+
+            textArea {
+                margin-top: 10px;
+                border: 0;
+                border-radius: 20px;
+                outline: none;
+            }
+
+            .bg{
+                background-color: #3A416D;
+                width: 680px;
+                 border: 0;
+                border-radius: 0 20px 20px 0;
+            }
+
+            input[type=submit] {
+                margin-top: 30px;
+                border: 0;
+                border-radius: 5px;
+                padding: 6px 20px;
+                background-color: white;
+                color: #474F85;
+            }
+
+            input[type=submit]:hover {
+                background-color: #474F85;
+                color: #EBF4F7;
+                box-shadow: 4px 4px 16px -10px rgba(0, 0, 0, 0.75);
+            }
+        </style>
+    </h:head>
+
+    <h:body>
+        <h3 class="title" align="center">Muslim.in</h3>
+        <div class="bg">
+            <img src="https://i.pinimg.com/564x/0b/27/cd/0b27cd4b4ccf99bdaf1ee20a20c8849b.jpg" alt="background"></img>
+        </div>
+        <div class="col-lg-6">
+            <h:form style="text-align: center;">
+                <h5 style="color: darkslategray; margin-bottom: 70px;">Sign up to Muslim.in</h5>
+                <h:inputText a:placeholder="Name" value="#{user.nama}"/>
+                <h:inputText a:placeholder="Email" value="#{user.email}"/>
+                <h:inputText a:placeholder="Password" value="#{user.password}"/>
+                <h:inputText a:placeholder="Phone Number" value="#{user.phoneNum}"/>
+                    <h:inputTextarea a:placeholder="  Home Address" cols="53" rows="3" value="#{user.alamat}"/><br/>
+                <hr style="width: 60%; margin-top: 30px;"/>
+                <h:commandButton value="Sign me up now!" action="./index.xhtml">
+                    <f:actionListener binding="#{user.save_user()}"/>
+                </h:commandButton>
+            </h:form>
+        </div>
+    </h:body>
+</html>
+
